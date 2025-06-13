@@ -71,45 +71,16 @@ const Community = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
-      {/* Header */}
-      <header className="border-b border-white/10 py-6 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center space-x-4 mb-4">
-            <Link href="/" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
-              <ArrowLeft className="h-6 w-6" />
-            </Link>
-            <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
-                Community Hub
-              </h1>
-              <p className="text-gray-300 mt-2">
-                Connect, learn, and build together with{" "}
-                <span className="text-emerald-400 font-medium">VestFlow community</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-            {communityStats.map((stat, index) => (
-              <Card
-                key={stat.label}
-                className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10"
-              >
-                <CardContent className="p-4 text-center">
-                  <stat.icon className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
-                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
-                    {stat.value}
-                  </div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <header className="border-b border-emerald-700/40 py-6 px-6 bg-slate-900/80">
+        <div className="max-w-6xl mx-auto flex items-center space-x-4">
+          <Link href="/" className="text-emerald-400 hover:text-white transition-colors duration-200">
+            <ArrowLeft className="h-6 w-6" />
+          </Link>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent drop-shadow-lg">
+            Community
+          </h1>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-12">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-800/50 border border-slate-700/50">

@@ -68,7 +68,7 @@ function VestingScheduleRow({ address, index }: { address: `0x${string}`; index:
 
   const handleViewOnExplorer = () => {
     // Open address on block explorer
-    window.open(`https://sepolia-explorer.lisk.com/address/${address}`, "_blank")
+    window.open(`https://sepolia-blockscout.lisk.com/address/${address}`, "_blank")
   }
 
   return (
@@ -171,7 +171,7 @@ export function VestingScheduleTable() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-2 sm:space-y-0">
           <CardTitle className="text-white text-base sm:text-lg">Vesting Schedules</CardTitle>
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <Badge variant="secondary" className="text-xs">
+            <Badge className="text-xs border border-emerald-600">
               {beneficiaries.length} Total
             </Badge>
             <Button

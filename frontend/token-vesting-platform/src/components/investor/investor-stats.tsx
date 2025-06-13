@@ -48,8 +48,8 @@ export function InvestorStats() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium text-green-300">Total Vested</CardTitle>
-          <Coins className="h-4 w-4 text-green-400" />
+          <CardTitle className="text-sm font-medium text-white">Total Vested</CardTitle>
+          <Coins className="h-4 w-4 text-white" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold text-white">
@@ -59,14 +59,14 @@ export function InvestorStats() {
               totalVested.toLocaleString()
             )}
           </div>
-          <p className="text-xs text-green-300">{hasVestingSchedule ? "Tokens in vesting" : "No vesting schedule"}</p>
+          <p className="text-xs text-white">{hasVestingSchedule ? "Tokens in vesting" : "No vesting schedule"}</p>
         </CardContent>
       </Card>
 
       <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium text-green-300">Claimable Now</CardTitle>
-          <TrendingUp className="h-4 w-4 text-green-400" />
+          <CardTitle className="text-sm font-medium text-white">Claimable Now</CardTitle>
+          <TrendingUp className="h-4 w-4 text-white" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold text-white">
@@ -76,14 +76,14 @@ export function InvestorStats() {
               claimableNow.toLocaleString()
             )}
           </div>
-          <p className="text-xs text-green-300">Available to claim</p>
+          <p className="text-xs text-white">Available to claim</p>
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 border-blue-500/20">
+      <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium text-blue-300">Wallet Balance</CardTitle>
-          <Coins className="h-4 w-4 text-blue-400" />
+          <CardTitle className="text-sm font-medium text-white">Wallet Balance</CardTitle>
+          <Coins className="h-4 w-4 text-white" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold text-white">
@@ -93,20 +93,20 @@ export function InvestorStats() {
               tokenBalance.toLocaleString()
             )}
           </div>
-          <p className="text-xs text-blue-300">Tokens in wallet</p>
+          <p className="text-xs text-white">Tokens in wallet</p>
         </CardContent>
       </Card>
 
       <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium text-green-300">Days Remaining</CardTitle>
-          <Calendar className="h-4 w-4 text-green-400" />
+          <CardTitle className="text-sm font-medium text-white">Days Remaining</CardTitle>
+          <Calendar className="h-4 w-4 text-white" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold text-white">
             {scheduleLoading ? <div className="h-8 bg-green-200/20 rounded "></div> : daysRemaining}
           </div>
-          <p className="text-xs text-green-300">Until fully vested</p>
+          <p className="text-xs text-white">Until fully vested</p>
         </CardContent>
       </Card>
     </div>

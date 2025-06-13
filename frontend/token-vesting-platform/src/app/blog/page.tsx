@@ -115,26 +115,23 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Header */}
-      <header className="border-b border-white/10 py-6 px-6">
+      <header className="border-b border-emerald-700/40 py-6 px-6 bg-slate-900/80">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+            <Link href="/" className="text-emerald-400 hover:text-white transition-colors duration-200">
               <ArrowLeft className="h-6 w-6" />
             </Link>
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent drop-shadow-lg">
                 VestFlow Blog
               </h1>
-              <p className="text-gray-300 mt-2">
-                Insights, updates, and guides for the{" "}
-                <span className="text-emerald-400 font-medium">Web3 community</span>
+              <p className="text-emerald-200 mt-2">
+                Insights, updates, and guides for the <span className="text-emerald-400 font-medium">Web3 community</span>
               </p>
             </div>
           </div>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-12">
         {/* Category Filter */}
         <div className="flex flex-wrap gap-3 mb-8">
@@ -143,17 +140,16 @@ const Blog = () => {
               key={category.id}
               variant={selectedCategory === category.id ? "secondary" : "ghost"}
               className={`
-                ${
-                  selectedCategory === category.id
-                    ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shadow-lg shadow-emerald-500/10"
-                    : "text-gray-300 hover:text-emerald-400 hover:bg-emerald-500/5 border border-transparent hover:border-emerald-500/20"
+                ${selectedCategory === category.id
+                  ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shadow-lg shadow-emerald-500/10"
+                  : "text-emerald-200 hover:text-emerald-400 hover:bg-emerald-500/5 border border-transparent hover:border-emerald-500/20"
                 }
                 transition-all duration-200
               `}
               onClick={() => setSelectedCategory(category.id)}
             >
               {category.label}
-              <Badge variant="outline" className="ml-2 border-current text-xs">
+              <Badge variant="outline" className="ml-2 border-current text-xs text-emerald-400 border-emerald-400">
                 {category.count}
               </Badge>
             </Button>

@@ -130,7 +130,7 @@ export function VestingProgress() {
   const status = getStatus()
 
   return (
-    <Card className="bg-slate-800/50 border-slate-700">
+    <Card className="bg-black border-2xl border-emerald-600">
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-white flex items-center">
@@ -207,7 +207,7 @@ export function VestingProgress() {
         </div>
 
         {/* Real-time Stats */}
-        <div className="bg-slate-700/30 p-4 rounded-lg">
+        <div className="bg-black border border-2xl border-emerald-600 p-4 rounded-lg">
           <h4 className="text-sm font-medium text-white mb-3 flex items-center">
             <Coins className="h-4 w-4 mr-2" />
             Real-time Statistics
@@ -233,7 +233,7 @@ export function VestingProgress() {
         </div>
 
         {/* Daily Release Info */}
-        <div className="bg-slate-700/30 p-4 rounded-lg">
+        <div className="bg-black border border-green-800 p-4 rounded-lg">
           <h4 className="text-sm font-medium text-white mb-2">Vesting Schedule</h4>
           <div className="space-y-1 text-xs text-slate-300">
             <p>• Linear vesting over 14 days</p>

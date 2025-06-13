@@ -44,7 +44,7 @@ export function HowItWorksSection() {
 
             <ul className="timeline timeline-vertical">
               <li>
-                <div key={index} className={`${step.className} relative shadow-[#101010]-500`}>
+                <div key={index} className={`${step.className} relative shadow-[#101010]-500 bg-black`}>
                   {/* <Card className="bg-slate-800/50 border-slate-700 hover:border-green-500/50 transition-all duration-300 h-full">
                     <CardContent className="p-6 sm:p-8 text-center"> */}
                   {/* <div
@@ -52,7 +52,7 @@ export function HowItWorksSection() {
                   >
                     <step.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                   </div> */}
-                  <div className="text-xs sm:text-sm font-semibold text-green-800 mb-2">STEP {index + 1}</div>
+                  <div className="md:text-2xl sm:text-sm font-semibold text-green-800 mb-2">STEP {index + 1}</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{step.title}</h3>
                   <p className="text-slate-400 leading-relaxed text-sm sm:text-base">{step.description}</p>
                   {/* </CardContent>

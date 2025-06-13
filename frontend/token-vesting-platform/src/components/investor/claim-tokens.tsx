@@ -53,7 +53,7 @@ export function ClaimTokens() {
   }
 
   return (
-    <Card className="bg-slate-800/50 border-slate-700">
+    <Card className="bg-black border border-green-600">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
           <Coins className="h-5 w-5 mr-2" />
@@ -146,7 +146,7 @@ export function ClaimTokens() {
         </Button>
 
         {/* Info */}
-        <div className="bg-slate-700/30 p-4 rounded-lg">
+        <div className="bg-black border border-green-600 p-4 rounded-lg">
           <h4 className="text-sm font-medium text-white mb-2">How Claiming Works</h4>
           <div className="space-y-1 text-xs text-slate-300">
             <p>• Tokens unlock linearly over 14 days</p>

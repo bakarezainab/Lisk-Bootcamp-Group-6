@@ -18,7 +18,7 @@ export function InvestorDashboard() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <Link href="/" className="btn text-slate-300 hover:text-white cursor-pointer">
+              <Link href="/" className="btn text-slate-300 bg-emerald-600 cursor-pointer">
                 {/* <Button variant="ghost" size="sm" > */}
                 <ArrowLeft className="h-4 w-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Back to Home</span>
@@ -70,7 +70,7 @@ export function InvestorDashboard() {
             <ClaimTokens />
 
             {/* Recent Activity */}
-            <Card className="bg-slate-800/50 border-slate-700">
+            <Card className="bg-black border border-green-600">
               <CardHeader>
                 <CardTitle className="text-white flex items-center text-base sm:text-lg">
                   <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />

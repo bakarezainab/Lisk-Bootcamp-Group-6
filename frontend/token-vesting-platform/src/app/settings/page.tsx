@@ -6,47 +6,43 @@ import { Settings, Moon, Sun, Bell } from "lucide-react"
 
 export default function SettingsPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 bg-gradient-to-br from-slate-900 via-slate-800 to-black min-h-screen p-6">
       <div>
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">Settings</h1>
-        <p className="text-slate-600 dark:text-slate-400 mt-2">Manage your account and application preferences</p>
+        <h1 className="text-3xl font-bold text-emerald-400 drop-shadow-lg">Settings</h1>
+        <p className="text-emerald-200 mt-2">Manage your account and application preferences</p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card>
+        <Card className="bg-slate-800 border-emerald-700/40 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Settings className="h-5 w-5 text-emerald-600" />
+            <CardTitle className="flex items-center space-x-2 text-emerald-400">
+              <Settings className="h-5 w-5 text-emerald-400" />
               <span>Account Settings</span>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="display-name">Display Name</Label>
-              <Input id="display-name" placeholder="Enter your display name" />
+              <Label htmlFor="display-name" className="text-emerald-200">Display Name</Label>
+              <Input id="display-name" placeholder="Enter your display name" className="bg-slate-900 border-emerald-700/40 text-white placeholder:text-emerald-200" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
-              <Input id="email" type="email" placeholder="Enter your email" />
+              <Label htmlFor="email" className="text-emerald-200">Email Address</Label>
+              <Input id="email" type="email" placeholder="Enter your email" className="bg-slate-900 border-emerald-700/40 text-white placeholder:text-emerald-200" />
             </div>
-            <Button>Save Changes</Button>
+            <Button className="bg-gradient-to-r from-emerald-500 to-green-700 text-white">Save Changes</Button>
           </CardContent>
         </Card>
-
-        <Card>
+        <Card className="bg-slate-800 border-emerald-700/40 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Bell className="h-5 w-5 text-emerald-600" />
+            <CardTitle className="flex items-center space-x-2 text-emerald-400">
+              <Bell className="h-5 w-5 text-emerald-400" />
               <span>Notification Settings</span>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium">Email Notifications</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Receive email notifications for important events
-                </p>
+                <p className="font-medium text-emerald-200">Email Notifications</p>
+                <p className="text-sm text-emerald-200">Receive email notifications for important events</p>
               </div>
               <div className="h-6 w-11 bg-slate-200 dark:bg-slate-700 rounded-full relative cursor-pointer">
                 <div className="h-5 w-5 bg-white rounded-full absolute top-0.5 left-0.5 shadow"></div>
@@ -54,10 +50,8 @@ export default function SettingsPage() {
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium">Push Notifications</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Receive push notifications for important events
-                </p>
+                <p className="font-medium text-emerald-200">Push Notifications</p>
+                <p className="text-sm text-emerald-200">Receive push notifications for important events</p>
               </div>
               <div className="h-6 w-11 bg-emerald-500 rounded-full relative cursor-pointer">
                 <div className="h-5 w-5 bg-white rounded-full absolute top-0.5 right-0.5 shadow"></div>
@@ -65,11 +59,10 @@ export default function SettingsPage() {
             </div>
           </CardContent>
         </Card>
-
-        <Card>
+        <Card className="bg-slate-800 border-emerald-700/40 shadow-lg">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Sun className="h-5 w-5 text-emerald-600" />
+            <CardTitle className="flex items-center space-x-2 text-emerald-400">
+              <Sun className="h-5 w-5 text-emerald-400" />
               <span>Appearance</span>
             </CardTitle>
           </CardHeader>
@@ -96,8 +89,7 @@ export default function SettingsPage() {
             </div>
           </CardContent>
         </Card>
-
-        <Card>
+        <Card className="bg-slate-800 border-emerald-700/40 shadow-lg">
           <CardHeader>
             <CardTitle className="text-red-600">Danger Zone</CardTitle>
           </CardHeader>

@@ -124,7 +124,7 @@ export function AdminDashboard() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center space-x-2 sm:space-x-4">
-                <Link href="/" className="btn text-slate-300 hover:text-white">
+                <Link href="/" className="btn text-slate-300 hover:text-white bg-emerald-600">
                   {/* <Button variant="ghost" size="sm" > */}
                   <ArrowLeft className="h-4 w-4 mr-1 sm:mr-2" />
                   <span className="hidden sm:inline">Back to Home</span>
@@ -171,7 +171,7 @@ export function AdminDashboard() {
             <TabsList className="grid w-full grid-cols-3 bg-slate-800/50 border border-slate-700">
               <TabsTrigger
                 value="create"
-                className="data-[state=active]:bg-green-600 text-xs sm:text-sm cursor-pointer"
+                className="data-[state=active]:bg-emerald-600 text-xs sm:text-sm cursor-pointer"
               >
                 <Plus className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Create Vesting</span>
@@ -179,7 +179,7 @@ export function AdminDashboard() {
               </TabsTrigger>
               <TabsTrigger
                 value="manage"
-                className="data-[state=active]:bg-green-600 text-xs sm:text-sm cursor-pointer"
+                className="data-[state=active]:bg-emerald-600 text-xs sm:text-sm cursor-pointer"
               >
                 <Users className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Manage Schedules</span>
@@ -187,7 +187,7 @@ export function AdminDashboard() {
               </TabsTrigger>
               <TabsTrigger
                 value="analytics"
-                className="data-[state=active]:bg-green-600 text-xs sm:text-sm cursor-pointer"
+                className="data-[state=active]:bg-emerald-600 text-xs sm:text-sm cursor-pointer"
               >
                 <BarChart3 className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Analytics</span>

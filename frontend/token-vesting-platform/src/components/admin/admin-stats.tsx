@@ -72,14 +72,14 @@ export function AdminStats() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <Card className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 border-blue-500/20">
+        <Card className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-500/20">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs sm:text-sm font-medium text-blue-300">Total Beneficiaries</CardTitle>
-            <Users className="h-3 w-3 sm:h-4 sm:w-4 text-blue-400" />
+            <CardTitle className="text-xs sm:text-sm font-medium text-white">Total Beneficiaries</CardTitle>
+            <Users className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
           </CardHeader>
           <CardContent>
             <div className="text-xl sm:text-2xl font-bold text-white">{stats.totalBeneficiaries}</div>
-            <p className="text-xs text-blue-300">
+            <p className="text-xs text-white">
               {stats.totalBeneficiaries === 0 ? "No beneficiaries yet" : "Active users"}
             </p>
           </CardContent>
@@ -87,32 +87,32 @@ export function AdminStats() {
 
         <Card className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-500/20">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs sm:text-sm font-medium text-emerald-300">Active Schedules</CardTitle>
-            <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-emerald-400" />
+            <CardTitle className="text-xs sm:text-sm font-medium text-white">Active Schedules</CardTitle>
+            <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
           </CardHeader>
           <CardContent>
             <div className="text-xl sm:text-2xl font-bold text-white">{stats.activeVestingSchedules}</div>
-            <p className="text-xs text-emerald-300">Currently vesting</p>
+            <p className="text-xs text-white">Currently vesting</p>
           </CardContent>
         </Card>
 
         <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs sm:text-sm font-medium text-green-300">Total Supply</CardTitle>
-            <Coins className="h-3 w-3 sm:h-4 sm:w-4 text-green-400" />
+            <CardTitle className="text-xs sm:text-sm font-medium text-white">Total Supply</CardTitle>
+            <Coins className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
           </CardHeader>
           <CardContent>
             <div className="text-xl sm:text-2xl font-bold text-white">
               {Number(stats.totalTokensLocked).toLocaleString()}
             </div>
-            <p className="text-xs text-green-300">{symbol || "Tokens"}</p>
+            <p className="text-xs text-white">{symbol || "Tokens"}</p>
           </CardContent>
         </Card>
 
         <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/20">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs sm:text-sm font-medium text-green-300">Platform Status</CardTitle>
-            <TrendingUp className="h-3 w-3 sm:h-4 sm:w-4 text-green-400" />
+            <CardTitle className="text-xs sm:text-sm font-medium text-white">Platform Status</CardTitle>
+            <TrendingUp className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
           </CardHeader>
           <CardContent>
             <div className="flex items-center space-x-2">
@@ -120,14 +120,14 @@ export function AdminStats() {
               <Badge
                 className={
                   isTokenSet
-                    ? "bg-green-500/20 text-green-300 border-green-500/30 text-xs"
+                    ? "bg-green-500/20 text-white-300 border-white text-xs"
                     : "bg-green-500/20 text-green-300 border-green-500/30 text-xs"
                 }
               >
                 {isTokenSet ? "✓" : "!"}
               </Badge>
             </div>
-            <p className="text-xs text-green-300">{isTokenSet ? "Ready for vesting" : "Needs configuration"}</p>
+            <p className="text-xs text-white">{isTokenSet ? "Ready for vesting" : "Needs configuration"}</p>
           </CardContent>
         </Card>
       </div>

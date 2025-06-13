@@ -60,7 +60,7 @@ export function FeaturesSection() {
             <div className="pl-[4px] pb-[4px] p-0 rounded-lg bg-gradient-to-tr from-[#184934] to-[#101010]animate_animated animate__backInUp">
               <Card
                 key={index}
-                className="bg-gradient-to-tr from-slate-800 to-[#101010] border-slate-700 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-black border-slate-700 hover:border-green-500/50 transition-all duration-300 group"
               >
                 <CardContent className="p-4 sm:p-6 flex flex-col items-center justify-center">
                   {/* <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-tr from-[#030003] to-[#460844]  rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300"> */}

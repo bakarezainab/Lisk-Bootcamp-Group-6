@@ -418,7 +418,7 @@ export function CreateVestingForm() {
       )}
 
       {/* Main Form */}
-      <Card className="bg-slate-800/50 border-slate-700">
+      <Card className="bg-black border border-green-600">
         <CardHeader>
           <CardTitle className="text-white flex items-center">
             <Clock className="h-5 w-5 mr-2" />
@@ -584,7 +584,7 @@ export function CreateVestingForm() {
 
             <Button
               type="submit"
-              className="w-full bg-gradient-to-r from-green-500 to-green-500 hover:from-green-600 hover:to-green-600 disabled:from-slate-600 disabled:to-slate-600"
+              className="w-full bg-gradient-to-r from-green-600 to-green-600 hover:from-green-600 hover:to-green-600 disabled:from-slate-600 disabled:to-slate-600"
               disabled={!isFormValid || isLoading || !address || step === "success"}
               size="lg"
             >
