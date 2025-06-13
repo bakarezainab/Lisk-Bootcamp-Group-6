@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer theme {
+  :root {
+    --color-background: 222.2 84% 4.9%;
+    --color-foreground: 210 40% 98%;
+    --color-card: 222.2 84% 4.9%;
+    --color-card-foreground: 210 40% 98%;
+    --color-popover: 222.2 84% 4.9%;
+    --color-popover-foreground: 210 40% 98%;
+    --color-primary: 142 76% 36%;
+    --color-primary-foreground: 355.7 100% 97.3%;
+    --color-secondary: 217.2 32.6% 17.5%;
+    --color-secondary-foreground: 210 40% 98%;
+    --color-muted: 217.2 32.6% 17.5%;
+    --color-muted-foreground: 215 20.2% 65.1%;
+    --color-accent: 217.2 32.6% 17.5%;
+    --color-accent-foreground: 210 40% 98%;
+    --color-destructive: 0 62.8% 30.6%;
+    --color-destructive-foreground: 210 40% 98%;
+    --color-border: 217.2 32.6% 17.5%;
+    --color-input: 217.2 32.6% 17.5%;
+    --color-ring: 142 76% 36%;
+    --radius: 0.5rem;
+  }
+}
+
+/* Use regular CSS instead of @apply in v4 */
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  /* background-color: hsl(var(--color-background)); */
+  color: hsl(var(--color-foreground));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(30 41 59); /* slate-800 equivalent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(71 85 105); /* slate-600 equivalent */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(100 116 139); /* slate-500 equivalent */
+}
+
+/* Rest of your custom styles remain the same */
+@keyframes gradient-x {
+  0%, 100% { transform: translateX(0%); }
+  50% { transform: translateX(-100%); }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+}
