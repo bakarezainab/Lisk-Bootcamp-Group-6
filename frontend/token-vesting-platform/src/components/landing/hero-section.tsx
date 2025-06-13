@@ -1,23 +1,21 @@
 "use client"
 
 // import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Users, Zap } from "lucide-react"
 import { motion } from "framer-motion";
 // import Link from "next/link"
-import Image from "next/image"
-import { useCallback } from "react"
-import Particles from "react-tsparticles"
-import { Engine } from "tsparticles-engine"
-import { loadFull } from "tsparticles"
+// import { useCallback } from "react"
+// import Particles from "react-tsparticles"
+// import { Engine } from "tsparticles-engine"
+// import { loadFull } from "tsparticles"
 
 export function HeroSection() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
-  }, [])
+  // const particlesInit = useCallback(async (engine: Engine) => {
+  //   await loadFull(engine)
+  // }, [])
 
   return (
     <section className="flex items-center justify-center pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative min-h-screen bg-gradient-to-tr from-[#0C1212] via-[#133124] to-[#030003]">
-      <Particles
+      {/* <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
@@ -93,7 +91,7 @@ export function HeroSection() {
           detectRetina: true,
         }}
         className="absolute inset-0"
-      />
+      /> */}
       <div className="container mx-auto text-center relative z-10">
         {/* Badge */}
         {/* <div className="inline-flex items-center px-3 sm:px-4 py-2 rounded-full bg-green-500/10 border border-purple-500/20 text-green-300 text-xs sm:text-sm font-medium mb-6 sm:mb-8">

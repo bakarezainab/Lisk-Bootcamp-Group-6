@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, UserPlus, Settings, TrendingUp, ArrowDown } from "lucide-react"
+import { UserPlus, Settings, TrendingUp } from "lucide-react"
 
 export function HowItWorksSection() {
   const steps = [
@@ -39,38 +38,20 @@ export function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="">
+        <div>
           {steps.map((step, index) => (
-
-            <ul className="timeline timeline-vertical">
+            <ul className="timeline timeline-vertical" key={index}>
               <li>
-                <div key={index} className={`${step.className} relative shadow-[#101010]-500 bg-black`}>
-                  {/* <Card className="bg-slate-800/50 border-slate-700 hover:border-green-500/50 transition-all duration-300 h-full">
-                    <CardContent className="p-6 sm:p-8 text-center"> */}
-                  {/* <div
-                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6`}
-                  >
-                    <step.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-                  </div> */}
+                <div className={`${step.className} relative shadow-[#101010]-500 bg-black`}>
                   <div className="md:text-2xl sm:text-sm font-semibold text-green-800 mb-2">STEP {index + 1}</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{step.title}</h3>
                   <p className="text-slate-400 leading-relaxed text-sm sm:text-base">{step.description}</p>
-                  {/* </CardContent>
-                  </Card> */}
                 </div>
                 <hr />
               </li>
             </ul>
-
           ))}
         </div>
-
-        {/* <ul className="timeline timeline-vertical">
-          <li>
-            <div className="timeline-start timeline-box">First Macintosh computer</div>
-            <hr />
-          </li>
-        </ul> */}
       </div>
     </section>
   )

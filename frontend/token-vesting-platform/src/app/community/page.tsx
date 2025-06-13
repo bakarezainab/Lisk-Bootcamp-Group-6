@@ -5,18 +5,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Users, MessageCircle, Calendar, Trophy, ExternalLink, Github, Twitter, ArrowLeft, Heart } from "lucide-react"
+import { MessageCircle, Calendar, ExternalLink, Github, Twitter, ArrowLeft, Heart } from "lucide-react"
 import Link from "next/link"
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState("overview")
 
-  const communityStats = [
-    { label: "Active Members", value: "12,847", icon: Users },
-    { label: "Daily Messages", value: "2,341", icon: MessageCircle },
-    { label: "Events This Month", value: "8", icon: Calendar },
-    { label: "Contributors", value: "156", icon: Trophy },
-  ]
+  // const communityStats = [
+  //   { label: "Active Members", value: "12,847", icon: Users },
+  //   { label: "Daily Messages", value: "2,341", icon: MessageCircle },
+  //   { label: "Events This Month", value: "8", icon: Calendar },
+  //   { label: "Contributors", value: "156", icon: Trophy },
+  // ]
 
   const socialChannels = [
     {
@@ -111,7 +111,7 @@ const Community = () => {
                 Join Our Channels
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {socialChannels.map((channel, index) => (
+                {socialChannels.map((channel) => (
                   <Card
                     key={channel.name}
                     className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10 group"
@@ -192,7 +192,7 @@ const Community = () => {
                 Upcoming Events
               </h2>
               <div className="space-y-4">
-                {upcomingEvents.map((event, index) => (
+                {upcomingEvents.map((event) => (
                   <Card
                     key={event.title}
                     className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10"

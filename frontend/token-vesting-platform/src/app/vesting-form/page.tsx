@@ -27,11 +27,11 @@ export default function VestingForm() {
     }))
   }
 
-  const calculateDailyRelease = () => {
-    const totalTokens = Number.parseInt(formData.totalTokenAmount) || 0
-    const duration = 14 // 14 days
-    return Math.floor(totalTokens / duration)
-  }
+  // const calculateDailyRelease = () => {
+  //   const totalTokens = Number.parseInt(formData.totalTokenAmount) || 0
+  //   const duration = 14 // 14 days
+  //   return Math.floor(totalTokens / duration)
+  // }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -103,7 +103,7 @@ export default function VestingForm() {
               placeholder="investor@example.com"
               required
             />
-            <p className="text-emerald-200 text-xs">We'll send feedback and updates to this email</p>
+            <p className="text-emerald-200 text-xs">We&apos;ll send feedback and updates to this email</p>
           </div>
           {/* Total Token Amount */}
           <div className="space-y-3">

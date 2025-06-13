@@ -1,8 +1,6 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-// import { Clock, Shield, BarChart3, Zap, Users, Lock } from "lucide-react"
 import { motion } from "framer-motion"
-
 
 export function FeaturesSection() {
   const features = [
@@ -36,7 +34,6 @@ export function FeaturesSection() {
       title: "Multi-beneficiary",
       description: "Create multiple vesting schedules for different beneficiaries from a single admin panel.",
     },
-
   ]
 
   return (
@@ -57,34 +54,31 @@ export function FeaturesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
-            <div className="pl-[4px] pb-[4px] p-0 rounded-lg bg-gradient-to-tr from-[#184934] to-[#101010]animate_animated animate__backInUp">
+            <div
+              key={index}
+              className="pl-[4px] pb-[4px] p-0 rounded-lg bg-gradient-to-tr from-[#184934] to-[#101010] animate_animated animate__backInUp"
+            >
               <Card
-                key={index}
                 className="bg-black border-slate-700 hover:border-green-500/50 transition-all duration-300 group"
               >
                 <CardContent className="p-4 sm:p-6 flex flex-col items-center justify-center">
-                  {/* <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-tr from-[#030003] to-[#460844]  rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300"> */}
-                  {/* <div> */}
                   <motion.img
                     src={`/${feature.icon}.png`}
                     alt="hero-image"
                     className="w-[50%]"
-                    animate={{ y: [0, -20, 0] }} // keyframes: start -> up -> down
+                    animate={{ y: [0, -20, 0] }}
                     transition={{
-                      duration: 2,        // slow bounce (2 seconds)
-                      repeat: Infinity,   // loop forever
-                      repeatType: "loop", // smooth looping
-                      ease: "easeInOut",  // smooth up/down motion
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut",
                     }}
                   />
-                  {/* <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" /> */}
-                  {/* </div> */}
                   <h2 className="lg:text-2xl sm:text-xl font-extrabold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent mb-2 sm:mb-3">{feature.title}</h2>
                   <p className="text-slate-400 text-center leading-relaxed text-sm sm:text-base">{feature.description}</p>
                 </CardContent>
               </Card>
             </div>
-
           ))}
         </div>
       </div>

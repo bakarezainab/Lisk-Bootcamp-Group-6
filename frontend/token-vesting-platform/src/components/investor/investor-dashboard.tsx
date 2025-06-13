@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { ArrowLeft, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import { WalletButton } from "@/components/wallet/wallet-button"

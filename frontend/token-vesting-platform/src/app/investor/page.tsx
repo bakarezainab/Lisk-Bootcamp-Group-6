@@ -12,7 +12,7 @@ export default function InvestorPage() {
           </Link>
         </div>
         <div className="bg-slate-800 border-emerald-700/40 shadow-lg rounded-lg p-6">
-          <InvestorDashboard progressColor="emerald" />
+          <InvestorDashboard />
         </div>
       </div>
     </div>
