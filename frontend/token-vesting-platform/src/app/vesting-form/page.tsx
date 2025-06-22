@@ -72,7 +72,7 @@ export default function VestingForm() {
             <Input
               value={formData.beneficiaryAddress}
               onChange={(e) => handleInputChange('beneficiaryAddress', e.target.value)}
-              className="bg-slate-800 border border-emerald-700/40 text-white placeholder:text-emerald-200 h-12 focus:ring-emerald-400 focus:border-emerald-400"
+              className="bg-slate-800 border border-emerald-700/40 text-white placeholder: h-12 focus:ring-emerald-400 focus:border-emerald-400"
               placeholder="0x742d35Cc6634C0532925a3b8D4C9db96590c6C87"
             />
             <p className="text-emerald-200 text-xs">Enter the Ethereum address of the token recipient</p>
@@ -99,7 +99,7 @@ export default function VestingForm() {
               type="email"
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className="bg-slate-800 border border-emerald-700/40 text-white placeholder:text-emerald-200 h-12 focus:ring-emerald-400 focus:border-emerald-400"
+              className="bg-slate-800 border border-emerald-700/40 text-white placeholder: h-12 focus:ring-emerald-400 focus:border-emerald-400"
               placeholder="investor@example.com"
               required
             />
@@ -115,7 +115,7 @@ export default function VestingForm() {
               type="number"
               value={formData.totalTokenAmount}
               onChange={(e) => handleInputChange('totalTokenAmount', e.target.value)}
-              className="bg-slate-800 border border-emerald-700/40 text-white placeholder:text-emerald-200 h-12 focus:ring-emerald-400 focus:border-emerald-400"
+              className="bg-slate-800 border border-emerald-700/40 text-white placeholder: h-12 focus:ring-emerald-400 focus:border-emerald-400"
               placeholder="100000"
             />
             <p className="text-emerald-200 text-xs">Total number of tokens to be vested over 14 days</p>
@@ -130,7 +130,7 @@ export default function VestingForm() {
               type="datetime-local"
               value={formData.startDateTime}
               onChange={(e) => handleInputChange('startDateTime', e.target.value)}
-              className="bg-slate-800 border border-emerald-700/40 text-white placeholder:text-emerald-200 h-12 focus:ring-emerald-400 focus:border-emerald-400"
+              className="bg-slate-800 border border-emerald-700/40 text-white placeholder: h-12 focus:ring-emerald-400 focus:border-emerald-400"
               placeholder="2025-11-06T23:54"
             />
             <p className="text-emerald-200 text-xs">When the vesting period should begin (can be immediate)</p>
