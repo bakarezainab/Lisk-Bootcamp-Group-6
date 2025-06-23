@@ -32,7 +32,6 @@ export function CTASection() {
                 </Link>
 
 
-
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                 </div>
               </div>
@@ -40,20 +39,38 @@ export function CTASection() {
             <div className="w-[40%]">
               <div className="flex flex-col items-center justify-center">
                 {/* Card */}
-                <div className="mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-                  {/* Fake YouTube Preview */}
-                  <div className="relative w-full aspect-video pointer-events-none">
-                    <iframe
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                      className="w-full h-full"
-                      allow="autoplay; encrypted-media"
-                      title="YouTube preview"
-                    ></iframe>
+                <div className="mx-auto bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-md">
+                  {/* Loom Video Thumbnail */}
+                  <div className="relative w-full h-48 cursor-pointer group" onClick={() => setIsOpen(true)}>
+                    <img
+                      // src={`https://cdn.loom.com/sessions/thumbnails/1f13e644057e4e9e82a1deb58db7579e-1920x1080.jpg`}
+                      src={`./loom.png`}
+                      
+                      alt="Video thumbnail - Vesting Platform Demo"
+                      className="w-full h-full object-cover rounded-t-lg"
+                      onError={(e) => {
+                        // Fallback to animated GIF if static image fails
+                        const target = e.target as HTMLImageElement;
+                        target.src = `https://cdn.loom.com/sessions/thumbnails/1f13e644057e4e9e82a1deb58db7579e-with-play.gif`;
+                      }}
+                    />
+                    {/* Play button overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                      <div className="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                        <svg className="w-8 h-8 text-green-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    {/* Video duration badge */}
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                      Demo Video
+                    </div>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsOpen(true)}
-                  className="w-auto m-auto bg-gradient-to-r from-green-600 to-green-800 hover:from-green-600 hover:to-green-600 px-4 py-2 text-base rounded-md sm:text-lg cursor-pointer mt-3"
+                  className="w-auto m-auto bg-gradient-to-r from-green-600 to-green-800 hover:from-green-600 hover:to-green-600 px-4 py-2 text-base rounded-md sm:text-lg cursor-pointer mt-3 text-white"
                 >
                   Watch Video
                 </button>
