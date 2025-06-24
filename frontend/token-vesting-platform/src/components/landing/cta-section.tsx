@@ -25,11 +25,21 @@ export function CTASection() {
                   intuitive Web3 platform.
                 </p>
 
+                <div className="flex gap-4 item-center justify-center flex-col sm:flex-row">
+                  <Link href="/" target="_blank">
+                      <Button variant="outline" className="w-auto m-auto bg-gradient-to-r from-green-600 to-green-800 hover:from-green-600 hover:to-green-600 px-4 py-4 text-base rounded-md sm:text-lg cursor-pointer mt-3">
+                              Community Vesting
+                       </Button>
+                </Link>
+
                 <Link href="/vesting-form">
-                      <Button variant="outline" className="w-auto m-auto bg-gradient-to-r from-green-600 to-green-800 hover:from-green-600 hover:to-green-600 px-4 py-2 text-base rounded-md sm:text-lg cursor-pointer mt-3">
+                      <Button variant="outline" className="w-auto m-auto bg-gradient-to-r from-green-600 to-green-800 hover:from-green-600 hover:to-green-600 px-4 py-4 text-base rounded-md sm:text-lg cursor-pointer mt-3">
                               Fill Vesting Form
                        </Button>
                 </Link>
+                </div>
+
+                
 
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
